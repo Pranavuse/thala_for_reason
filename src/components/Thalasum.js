@@ -29,11 +29,14 @@ const Thalasum = () => {
         if(sum==7){
           playAudio();
           document.body.style.backgroundColor="#eff6ff";
-          document.body.style.backgroundImage= {confetti};
+          
+          document.body.style.backgroundImage = `url(${confetti})`;
+
         }
         else{
           playMoye();
-          document.body.style.backgroundColor="#ffffff"
+          document.body.style.backgroundColor="#ffffff";
+          document.body.style.backgroundImage = null;
         }
       };
 
@@ -48,7 +51,7 @@ const Thalasum = () => {
         <button className='btn btn-success mt-5'>Share Snippet</button>
         <p>Made in love with Pranav Jain<br/>❤️❤️</p>
         <p className='h5'>{result}</p>
-        <img src={confetti}>{result}</img>
+        {/* <img src={confetti}>{result}</img> */}
       </div>
     </div>
   );
